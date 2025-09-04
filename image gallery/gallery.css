@@ -1,0 +1,391 @@
+/* Reset and Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: darkmagenta;
+    overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darkmagenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Title Bar */
+.tittlebar {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: default;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.tittlebar:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Gallery Items */
+.container div,
+.gallery-item {
+    width: 280px;
+    margin: 15px;
+    color: white;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.gallery-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Images */
+.container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Text Elements */
+.container h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 15px 0 10px 0;
+    transition: all 0.3s ease;
+}
+
+.container p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.gallery-item:hover h1 {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.gallery-item:hover p {
+    transform: translateY(-5px);
+    opacity: 1;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Modal Styles */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.image-modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    animation: modalSlideIn 0.4s ease;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-caption {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.close-btn:hover {
+    color: #ff6b6b;
+    transform: scale(1.2);
+}
+
+/* Particle Effects */
+.particle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particleFloat 1.5s ease-out forwards;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% { 
+        transform: translateY(0); 
+    }
+    40% { 
+        transform: translateY(-20px); 
+    }
+    80% { 
+        transform: translateY(-10px); 
+    }
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-15px); 
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Animation Classes */
+.animate-in-view {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.pulse-animation {
+    animation: pulse 0.6s ease-in-out;
+}
+
+.bounce-animation {
+    animation: bounce 0.6s ease;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.glow-text {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .gallery-item {
+        width: 90%;
+        max-width: 350px;
+        margin: 10px;
+    }
+    
+    .tittlebar {
+        font-size: 2.5rem;
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .loading-content {
+        font-size: 1.5rem;
+    }
+    
+    .close-btn {
+        font-size: 2.5rem;
+        top: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tittlebar {
+        font-size: 2rem;
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .gallery-item {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .container img {
+        height: 180px;
+    }
+    
+    .container h1 {
+        font-size: 1.3rem;
+    }
+    
+    .container p {
+        font-size: 0.9rem;
+    }
+    
+    .loading-content {
+        font-size: 1.2rem;
+    }
+}

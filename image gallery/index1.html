@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            Loading Gallery...
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Main Title -->
+    <h1 class="tittlebar">Animal Gallery</h1>
+    
+    <!-- Gallery Container -->
+    <div class="container">
+        <!-- Lion Card -->
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Lion" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Lion</h1>
+            <p>The lion is known as the king of the jungle</p>
+        </div>
+
+        <!-- Tiger Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Tiger" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Tiger</h1>
+            <p>Tiger is the national animal of India</p>
+        </div>
+
+        <!-- Bird Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1555169062-013468b47731?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Bird" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Bird</h1>
+            <p>Birds sing beautifully in the morning</p>
+        </div>
+
+        <!-- Deer Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?q=80&w=689&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Deer" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Deer</h1>
+            <p>Deer are known for their speed and grace</p>
+        </div>
+
+        <!-- Rabbit Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529040181623-e04ebc611e25?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Rabbit" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Rabbit</h1>
+            <p>Rabbits are cute and love eating carrots</p>
+        </div>
+
+        <!-- Fish Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Fish" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Fish</h1>
+            <p>Fish swim gracefully in the ocean</p>
+        </div>
+
+        <!-- Squirrel Card -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1480554840075-72cbdabbf689?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Squirrel" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Squirrel</h1>
+            <p>Squirrels are among the cutest animals</p>
+        </div>
+
+        <!-- Woodpecker Card -->
+        <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1709899169846-a6cb30501ecb?q=80&w=1040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Woodpecker" 
+                 height="200" 
+                 width="200"
+                 loading="lazy">
+            <h1>Woodpecker</h1>
+            <p>Woodpeckers are skilled at pecking trees</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="gallery.js"></script>
+</body>
+</html>
